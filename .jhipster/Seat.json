@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20230407112557",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "seat",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "seatNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "SeatStatus",
+      "fieldValues": "AVAILABLE,BOOKED"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Seat",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "movieShow",
+      "otherEntityRelationshipName": "seats",
+      "relationshipName": "movieShow",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20230407112556",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "movie",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "genre",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Movie",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "theatres",
+      "otherEntityRelationshipName": "movie",
+      "ownerSide": true,
+      "relationshipName": "theatres",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

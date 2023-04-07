@@ -1,0 +1,38 @@
+entity Theatres {
+  theatreName String,
+  theatreCity String,
+}
+
+entity MovieShow {
+  movieName String,
+  showTime Instant,
+}
+
+entity Movie {
+  title String,
+  genre String,
+}
+
+entity Seat {
+  id Long,
+  seatNumber String,
+  status SeatStatus,
+}
+
+enum SeatStatus {
+  AVAILABLE, BOOKED
+}
+
+relationship ManyToMany {
+  Movie to Theatres
+}
+
+relationship OneToMany {
+  Theatres{movieShows} to MovieShow
+}
+
+relationship OneToMany {
+  MovieShow{seats} to Seat
+}
+
+service all with serviceImpl except Seat

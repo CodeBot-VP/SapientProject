@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20230407112554",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "theatres",
+  "fields": [
+    {
+      "fieldName": "theatreName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "theatreCity",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Theatres",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "movieShow",
+      "otherEntityRelationshipName": "theatres",
+      "relationshipName": "movieShows",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "movie",
+      "otherEntityRelationshipName": "theatres",
+      "ownerSide": false,
+      "relationshipName": "movie",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,37 @@
+{
+  "applications": "*",
+  "changelogDate": "20230407112555",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "movie_show",
+  "fields": [
+    {
+      "fieldName": "movieName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "showTime",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "MovieShow",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "seat",
+      "otherEntityRelationshipName": "movieShow",
+      "relationshipName": "seats",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "theatres",
+      "otherEntityRelationshipName": "movieShows",
+      "relationshipName": "theatres",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
